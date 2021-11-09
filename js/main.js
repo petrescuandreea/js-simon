@@ -25,6 +25,8 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 // SELEZIONE ELEMENTI UTILI  
 let numbers = document.querySelector(".numbers");
 let inputNumbers = document.getElementById("user-numbers");
+let pcNumbers = document.getElementById("pc-numbers");
+let hiddenText = document.getElementById("hidden");
 
 
 // INVOCO LA FUNZIONE CHE MI CREA 5 NUMERI CASUALI UNIVOCI
@@ -62,7 +64,14 @@ setTimeout(() => {
         // se l'array contiene il numero inserito dall'utente 
         if(randomNumbers.includes(element) === true) {
             // lo stampo in html 
-            inputNumbers.innerHTML += element +"  ";
+            inputNumbers.innerHTML += element +", ";
+            hiddenText.style.display="block";
+            inputNumbers.classList.add("custom-style");
+            pcNumbers.classList.add("dnone");
+        } else {
+            hiddenText.style.display = "block";
+            inputNumbers.classList.add("custom-style");
+            pcNumbers.classList.add("dnone");
         }
     });
 
@@ -73,10 +82,12 @@ setTimeout(() => {
 
 
 
+
 // CREO UNA FUNZIONE PER GENERARE NUMERI CASUALI
 function createRandomNumbers (max) {
     // CREO ARRAY VUOTO DA POPOLARE CON I NUMERI RANDOM
     let numbersArray = [];
+    console.log(numbersArray);
 
     while (numbersArray.length < 5) {
         // genero un numero casuale tra 1 e 100 e lo salvo in una variabile
