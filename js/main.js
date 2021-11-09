@@ -44,19 +44,21 @@ setTimeout(() => {
     let userNumbers = [];
 
     // CHIEDO ALL'UTENTE PER 5 VOLTE DI INSERIRE UN NUMERO 
-    // for(let i = 0; i < 5; i++){
-    //     var userNumber = parseInt(prompt("inserisci un numero"));
-    // }
+    for(let i = 0; i < 5; i++){
+        var userNumber = parseInt(prompt("inserisci un numero"));
+        userNumbers.push(userNumber);
+    }
+    console.log(userNumbers);
+    
 
-    let number1 = parseInt(prompt("inserisci un numero"));
-    let number2 = parseInt(prompt("inserisci un numero"));
-    let number3 = parseInt(prompt("inserisci un numero"));
-    let number4 = parseInt(prompt("inserisci un numero"));
-    let number5 = parseInt(prompt("inserisci un numero"));
+    // let number1 = parseInt(prompt("inserisci un numero"));
+    // let number2 = parseInt(prompt("inserisci un numero"));
+    // let number3 = parseInt(prompt("inserisci un numero"));
+    // let number4 = parseInt(prompt("inserisci un numero"));
+    // let number5 = parseInt(prompt("inserisci un numero"));
     
     // POPOLO L'ARRAY CON I NUMERI INSERITI DALL'UTENTE  
-    userNumbers.push(number1, number2, number3, number4, number5);
-    console.log(userNumbers);
+    // userNumbers.push(number1, number2, number3, number4, number5);
 
 
     // CONFRONTO I NUMERI INSERITI GENERATI DAL PC CON QUELLI INSERITI DALL'UTENTE 
